@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font family -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tagesschrift&display=swap"
+    rel="stylesheet">
+
+    <!-- Font-Awesome_Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body class="custom-bg min-h-screen font-sans ">
+
+  <header class="py-6 text-center shadow">
+    <h1 class="text-5xl">🌤️ Weather Forecast</h1>
+  </header>
+
+  <main class="container relative">
+
+    <section>
+      <form class="search-box" onsubmit="event.preventDefault();">
+        <input id="cityInput" type="text" placeholder="Enter city" class="input-box relative" autocomplete="off" />
+        <div id="suggestionsBox" class="suggestions-box hidden"></div>
+        <button id="searchBtn" type="button" class="btn search-btn">Search</button>
+        <button id="locationBtn" type="button" class="btn location-btn">📍 My Location</button>
+      </form>
+
+      <nav>
+        <select id="recentCities" class="recent-cities hidden" aria-label="Recently searched cities"></select>
+      </nav>
+
+      <div id="errorMsg" class="error-msg" role="alert"></div>
+    </section>
+
+    <section id="currentWeather" class="card hidden"></section>
+
+    <section>
+      <h2 id="forecastTitle" class="forecast-title hidden">5-Day Forecast</h2>
+      <div id="forecast" class="forecast-grid hidden"></div>
+    </section>
+
+  </main>
+
+  
+
+  <footer class="text-center py-4 mt-6 text-sm text-black-700">
+    <div class="flex justify-between footer">
+      <h3 class="mt-6 ml-16 text-2xl copy-right">&copy;2025 Weather Forecast App. All rights reserved.</h3>
+      <div class="social-icons flex space-x-4 mt-4 items-center mr-16">
+        <a href="https://www.linkedin.com/in/shobhit-jindal-0b96b5232"><i class=" icon fab fa-linkedin fa-2x p-4"></i></a>
+        <a href="https://github.com/Shobhit1307/Weather_Forecst"><i class=" icon fab fa-github fa-2x p-4"></i></a>
+        <a href="https://www.instagram.com/shobhitjindal07/profilecard/?igsh=MXVwaGE4b2Ftcng2dw=="><i class=" icon fab fa-instagram fa-2x p-4"></i></a>
+        <a href="https://x.com/ShobhitJ07"><i class=" icon fab fa-twitter fa-2x p-4"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

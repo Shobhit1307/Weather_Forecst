@@ -1,0 +1,210 @@
+/* Tailwind + custom styles */
+
+.custom-bg {
+  background: linear-gradient(to right, #c1f6ff,#79ebff);
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+
+header{
+  background: linear-gradient(to right, #33808f, #267686);
+  font-weight: 600;
+  
+ }
+h1{
+  color: #2f0707;
+  transition: all 0.5s;
+}
+h1:hover{
+  transform: skewY(-3deg);
+}
+/* body-main */
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  
+}
+
+.input-box {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: #f9f8e2;
+  font-weight: 500;
+  font-size: 2 rem;
+}
+
+.btn {
+  padding: 0.75rem 1rem;
+  background-color: #0e1b30;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #12c8ff;
+  color: black;
+  transform: scale(1.1);
+  font-weight: 500;
+
+}
+
+/* recent-cities-local-storage */
+.recent-cities {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  width: 100%;
+  background: #f9f8e2;
+  font-weight: 500;
+}
+
+/* Cards for temp Info */
+.card {
+  background: #1cd9ff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow:  6px 6px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  color: #2f0707;
+  font-weight: 400;
+}
+
+.forecast-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.forecast-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.forecast-grid > div {
+  background: #1cd9ff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow:  6px 6px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Suggestions dropdown */
+.suggestions-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #f9f8e2;
+  border: 1px solid #ddd;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
+}
+
+.suggestion-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: #9cffe6;
+}
+
+.error-msg {
+  color: red;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+/* footer */
+footer{
+  background: linear-gradient(to right, #33808f, #267686);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.icon{
+  transition : all 0.3s;
+}
+.icon:hover{
+  transform: skewY(15deg) scale(1.6);
+  
+}
+/* Media Queries */
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+    padding: 2rem;
+  }
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .input-box, .btn {
+    width: 100%;
+  }
+
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer{
+    flex-direction: column;
+    margin: auto;
+    }
+
+  .copy-right{
+    margin-right: 80px;
+    
+  }
+  .social-icons{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
